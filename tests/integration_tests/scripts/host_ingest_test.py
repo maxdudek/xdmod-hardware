@@ -10,7 +10,7 @@ def associate(host_num, node_num, num_days):
     for record_time in range(currentTimeOf[host_num], end_time, SECONDS_PER_DAY):
         newRow = [hosts[host_num]] + nodes[node_num] + [record_time]
         result.append(newRow)
-    currentTimeOf[host_num] = end_time - SECONDS_PER_DAY
+    currentTimeOf[host_num] = end_time
 
 
 result = [
@@ -95,7 +95,7 @@ nodes = [
     ]
 ]
 
-associate(0, 0, 10)
+associate(0, 0, 7)
 associate(0, 1, 5)
 associate(0, 0, 10)
 associate(0, 0, 20)
